@@ -2,12 +2,31 @@
 <html>
 <head>
   <title>Flomo to Readwise</title>
-  <link rel="stylesheet" type="text/css" href="styles/popup.css">
+  <style>
+    .status-indicator {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .status-waiting { background-color: gray; }
+    .status-in-progress { background-color: yellow; }
+    .status-success { background-color: green; }
+    .status-error { background-color: red; }
+  </style>
 </head>
 <body>
   <h1>Flomo to Readwise</h1>
   <button id="syncButton">Sync Now</button>
   <p id="lastSync">Last sync: Never</p>
+  <div id="syncStatus">
+    <p><span class="status-indicator status-waiting" id="flomoStatus"></span> Fetch from Flomo</p>
+    <p><span class="status-indicator status-waiting" id="processStatus"></span> Process Data</p>
+    <p><span class="status-indicator status-waiting" id="readwiseStatus"></span> Send to Readwise</p>
+  </div>
+  <p id="errorMessage"></p>
+  <a href="#" id="openOptions">Open Settings</a>
   <script src="popup.js"></script>
 </body>
 </html>
