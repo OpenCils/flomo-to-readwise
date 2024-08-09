@@ -3,13 +3,19 @@
   "name": "Flomo to Readwise",
   "version": "1.0",
   "description": "Sync your Flomo notes to Readwise",
+  "icons": {
+    "128": "icons/icon128.png"
+  },
   "permissions": [
     "storage",
     "alarms",
     "https://readwise.io/*"
   ],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "128": "icons/icon128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
