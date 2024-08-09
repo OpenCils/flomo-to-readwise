@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Flomo to Readwise",
+  "version": "1.0",
+  "description": "Sync your Flomo notes to Readwise",
+  "permissions": [
+    "storage",
+    "alarms",
+    "https://readwise.io/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html"
+}
